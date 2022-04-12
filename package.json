@@ -1,0 +1,19 @@
+{
+  "name": "animation-buttons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss/main.scss:style/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-AJay:a7773077567/animation-buttons.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.50.0"
+  }
+}
