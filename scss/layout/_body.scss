@@ -1,4 +1,6 @@
 @use "../utils/breakpoints";
+
+@use "../components/buttons/buttons-8";
 body {
   display: flex;
   justify-content: space-between;
