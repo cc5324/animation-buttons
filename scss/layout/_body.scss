@@ -1,14 +1,16 @@
 @use "../utils/breakpoints";
 
-@use "../components/buttons/buttons-8";
-@use "../components/buttons/buttons-13";
+@use "../components/buttons/button-8";
+@use "../components/buttons/button-12";
+@use "../components/buttons/button-13";
+
 body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
   row-gap: 2rem;
-  height: 100vh;
+  height: calc(100vh - 2rem);
   background-color: #e0e5ec;
 }
 h1 {
