@@ -18,6 +18,79 @@ ol {
   padding: 0;
 }
 
+.button7 {
+  box-shadow: inset 2px 2px 2px 0 rgba(255, 255, 255, 0.5), 7px 7px 20px 0 rgba(0, 0, 0, 0.1), 4px 4px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.button7_text::after, .button7_text::before, .button7::after, .button7::before {
+  content: "";
+  position: absolute;
+  background-color: rgb(251, 75, 2);
+  box-shadow: -7px -7px 20px 0 rgba(255, 255, 255, 0.9), -4px -4px 5px 0 rgba(255, 255, 255, 0.9), 7px 7px 20px 0 rgba(0, 0, 0, 0.2), 4px 4px 5px 0 rgba(0, 0, 0, 0.3);
+  transition: all 300ms ease;
+}
+
+.button7 {
+  position: relative;
+  width: 130px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  line-height: 40px;
+  font-weight: 500;
+  background: linear-gradient(0deg, rgb(255, 151, 0) 0%, rgb(255, 75, 2) 100%);
+  transition: all 300ms ease;
+}
+.button7:hover {
+  background: transparent;
+}
+.button7:hover::before {
+  height: 100%;
+}
+.button7:hover::after {
+  width: 100%;
+}
+.button7:hover .button7_text {
+  color: rgb(251, 75, 2);
+}
+.button7::before {
+  right: 0;
+  bottom: 0;
+  width: 2px;
+  height: 0%;
+}
+.button7::after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+}
+.button7_text {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+.button7_text:hover::before {
+  height: 100%;
+}
+.button7_text:hover::after {
+  width: 100%;
+}
+.button7_text::before {
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 0%;
+}
+.button7_text::after {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 2px;
+}
+
 .button8 {
   width: 130px;
   height: 40px;
