@@ -1,0 +1,43 @@
+.button14 {
+  position: relative;
+  z-index: 1;
+
+  width: 130px;
+  height: 40px;
+
+  padding: 0;
+  background: orange;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset 2px 2px 2px 0px rgb(255 255 255 / 50%),
+    7px 7px 20px 0px rgb(0 0 0 / 10%), 4px 4px 5px 0px rgb(0 0 0 / 10%);
+
+  &:hover {
+    color: black;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 0;
+
+    border-radius: 5px;
+    background: linear-gradient(180deg, #fdeb71 10%, #f8d800 100%);
+
+    transition: all 500ms ease-in-out;
+  }
+
+  &:hover::after {
+    height: 100%;
+
+    top: auto;
+    bottom: 0;
+  }
+}
