@@ -18,7 +18,6 @@ ol {
   padding: 0;
 }
 
-
 .button1 {
   width: 130px;
   height: 40px;
@@ -41,6 +40,7 @@ ol {
 .button1:hover {
   background: linear-gradient(to top, rgb(0, 255, 200) 0%, rgb(2, 126, 251) 100%);
 }
+
 .button6 {
   position: relative;
   width: 130px;
@@ -312,6 +312,54 @@ ol {
   transition: all 300ms ease;
 }
 
+.button11 {
+  width: 130px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background: linear-gradient(0deg, #ffa07a 10%, #cd5c5c 100%);
+  overflow: hidden;
+  position: relative;
+}
+.button11:hover {
+  opacity: 0.7;
+}
+.button11:active {
+  opacity: 1;
+  box-shadow: inset -5px -5px 10px 0 rgba(255, 255, 255, 0.2), inset 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.button11::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: white;
+  border-radius: 5px;
+  animation: flash 3s ease-out infinite;
+}
+
+@keyframes flash {
+  0% {
+    -webkit-transform: scale(0) rotate(-30deg);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(0) rotate(-30deg);
+    opacity: 0.5;
+  }
+  81% {
+    -webkit-transform: scale(4) rotate(-30deg);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(20) rotate(-30deg);
+    opacity: 0;
+  }
+}
 .button12 {
   position: relative;
   width: 130px;
