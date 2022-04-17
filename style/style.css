@@ -40,7 +40,7 @@ ol {
 }
 .button1:hover {
   background: linear-gradient(to top, rgb(0, 255, 200) 0%, rgb(2, 126, 251) 100%);
-
+}
 .button6 {
   position: relative;
   width: 130px;
