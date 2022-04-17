@@ -1,0 +1,42 @@
+%button-shadow {
+  box-shadow: inset 2px 2px 2px 0 rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0 rgba(0, 0, 0, 0.1), 4px 4px 5px 0 rgba(0, 0, 0, 0.1);
+}
+%button-shadow-hover {
+  box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, 0.5),
+    -4px -4px 6px 0 rgba(116, 125, 136, 0.2),
+    inset -4px -4px 6px 0 rgba(255, 255, 255, 0.5),
+    inset 4px 4px 6px 0 rgba(116, 125, 136, 0.3);
+}
+.button9 {
+  @extend %button-shadow;
+  position: relative;
+  width: 130px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  overflow: hidden;
+  color: white;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 300ms ease;
+
+  &:hover {
+    @extend %button-shadow-hover;
+    &::after {
+      @extend %button-shadow-hover;
+      transform: rotate(180deg) scale(2);
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    display: block;
+    background-color: #1fd1f9;
+    background: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+    transition: all 300ms ease;
+  }
+}
