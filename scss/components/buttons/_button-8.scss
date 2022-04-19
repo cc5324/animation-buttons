@@ -1,3 +1,13 @@
+%button-line {
+  content: "";
+  display: inline-block;
+  background-color: rgb(255 231 207);
+  transition: all 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 .button8 {
   width: 130px;
   height: 40px;
@@ -10,8 +20,8 @@
   transition: all 0.3s ease;
   position: relative;
   display: inline-block;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+    4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
   position: relative;
   background-color: #f0ecfc;
@@ -21,68 +31,114 @@
   background-image: linear-gradient(315deg, #b1320f 0%, #e6d6d0 74%);
 }
 
-.button8::before,
-.button8::after {
-  content: "";
-  background-color: rgb(255 231 207);
-  transition: all 0.3s ease;
-}
+.button8 {
+  &:hover {
+    background-image: linear-gradient(315deg, #f1c3b6 0%, #3a1508 74%);
 
-.button8::before {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 0%;
-}
-.button8::after {
-  width: 0%;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 0%;
-}
+    &::before {
+      width: 100%;
+    }
+    &::after {
+      height: 100%;
+      border-radius: 0% 0% 50% 0%;
+    }
+    span {
+      color: rgb(255 231 207);
+      &::before {
+        width: 100%;
+      }
+      &::after {
+        height: 100%;
+      }
+    }
+  }
+  &::before {
+    @extend %button-line;
+    width: 0;
+    height: 2px;
+  }
+  &::after {
+    @extend %button-line;
+    width: 2px;
+    height: 0;
+  }
 
-.button8:hover:before {
-  height: 100%;
-  width: 2px;
+  span {
+    &::before {
+      @extend %button-line;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+    }
+    &::after {
+      @extend %button-line;
+      top: 0;
+      left: 0;
+      width: 2px;
+      height: 0;
+    }
+  }
 }
+// .button8::before,
+// .button8::after {
+// }
 
-.button8:hover:after {
-  height: 2px;
-  width: 100%;
-}
+// .button8::before {
+//   position: absolute;
+//   right: 0;
+//   bottom: 0;
+//   height: 0%;
+// }
+// .button8::after {
+//   width: 0%;
+//   position: absolute;
+//   right: 0;
+//   bottom: 0;
+//   height: 0%;
+// }
 
-.button8 span:hover {
-  color: rgb(255 231 207);
-}
+// .button8:hover span::before {
+//   height: 100%;
+//   width: 2px;
+// }
 
-.button8 span::before,
-.button8 span::after {
-  content: "";
-  display: inline-block;
-  background: rgb(255 231 207);
-  transition: all 0.3s ease;
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-.button8 span::before {
-  width: 0;
-  height: 2px;
-}
-.button8 span::after {
-  width: 2px;
-  height: 0px;
-}
+// .button8:hover span::after {
+//   height: 2px;
+//   width: 100%;
+// }
 
-.button8 span:hover::before {
-  width: 100%;
-}
+// .button8 span:hover {
+//   color: rgb(255 231 207);
+// }
 
-.button8 span:hover::after {
-  height: 100%;
-}
+// .button8 span::before,
+// .button8 span::after {
+//   content: "";
+//   display: inline-block;
+//   background: rgb(255 231 207);
+//   transition: all 0.3s ease;
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+// }
+// .button8 span::before {
+//   width: 0;
+//   height: 2px;
+// }
+// .button8 span::after {
+//   width: 2px;
+//   height: 0px;
+// }
 
-.button8:hover {
-  background-image: linear-gradient(315deg, #f1c3b6 0%, #3a1508 74%);
-}
+// .button8 span:hover::before {
+//   width: 100%;
+// }
+
+// .button8 span:hover::after {
+//   height: 100%;
+// }
+
+// .button8:hover {
+//   background-image: linear-gradient(315deg, #f1c3b6 0%, #3a1508 74%);
+// }
