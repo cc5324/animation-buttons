@@ -1,0 +1,82 @@
+%custom-btn {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    rgba(0, 0, 0, 0.3) 3px 3px 10px;
+  width: 130px;
+  height: 40px;
+  border-radius: 5px;
+  border: 0;
+  color: white;
+  background: transparent;
+  padding: 0;
+}
+%position-right-top {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  background: rgba(2, 126, 251, 1);
+  transition: all 0.3s ease;
+}
+%position-left-bottom {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  background: rgba(2, 126, 251, 1);
+  transition: all 0.3s ease;
+}
+.button3 {
+  @extend %custom-btn;
+  // background: rgb(2, 0, 36);
+  position: relative;
+  // font-size: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 172, 238, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
+  &:hover {
+    background: transparent;
+    box-shadow: none;
+    &::before {
+      height: 100%;
+    }
+    &::after {
+      width: 100%;
+    }
+  }
+  &::before {
+    @extend %position-right-top;
+    height: 0%;
+    width: 2px;
+  }
+  &::after {
+    @extend %position-right-top;
+    height: 2px;
+    width: 0%;
+  }
+}
+.button3 span {
+  display: block;
+  color: white;
+  line-height: 40px;
+  &:hover {
+    color: rgba(2, 126, 251, 1);
+    &::before {
+      height: 100%;
+    }
+    &::after {
+      width: 100%;
+    }
+  }
+  &::before {
+    @extend %position-left-bottom;
+    height: 0%;
+    width: 2px;
+  }
+  &::after {
+    @extend %position-left-bottom;
+    height: 2px;
+    width: 0%;
+  }
+}
